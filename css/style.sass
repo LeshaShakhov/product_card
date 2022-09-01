@@ -1,0 +1,218 @@
+@import "variables"
+
+body
+  margin: 0
+  padding: 0
+  font-family: "Open Sans", Helvetica, Arial, sans-serif
+  font-size: 16px
+  font-weight: 400
+  line-height: 1.5
+  color: $text-color-primary
+  position: relative
+a
+  text-decoration: none
+.link
+  color: $text-color-primary
+  transition: opacity 0.3s
+  text-transform: uppercase
+  font-size: 14px
+  font-weight: 700
+  letter-spacing: 0.1px
+  position: absolute
+  right: 15px
+  bottom: 15px
+  img
+    height: 15px
+  &:hover
+    opacity: 0.7
+.h-100
+  min-height: calc(100vh - 55px)
+.gray-text
+  color: $text-color-secondary
+.border-bottom
+  border-bottom: 1px solid #e7eaf3
+.btn-primary
+  color: #ffffff
+  background-color: $red
+  border: 2px solid $red
+  transition: background-color 0.3s, border 0.3s
+  &:hover
+    background-color: $gray
+    border: 2px solid $gray
+    &:disabled
+      background-color: $red
+      border: 2px solid $red
+.btn-secondary
+  color: $red
+  background-color: #ffffff
+  border: 2px solid $red
+  box-sizing: border-box
+  transition: border 0.3s, color 0.3s
+  &:hover
+    border: 2px solid $gray
+    color: $gray
+.btn
+  display: inline-block
+  padding: 10px 50px
+  text-decoration: none
+  font-size: 14px
+  font-weight: 700
+  box-sizing: border-box
+  cursor: pointer
+  &:disabled
+    opacity: 0.5
+    cursor: auto
+.flex-center-center
+  display: flex
+  align-items: center
+  justify-content: center
+.header
+  background-color: $red
+  padding: 10px 0
+  margin-bottom: 10px
+  .header-container
+    justify-content: flex-end
+  .cart-image
+    height: 25px
+    width: auto
+.container
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+  display: flex
+  align-items: center
+  box-sizing: border-box
+  @media screen and (min-width: $sm-bp)
+    max-width: 930px
+  @media screen and (min-width: $md-bp)
+    max-width: 1450px
+.product-root
+  padding-bottom: 60px
+  box-sizing: border-box
+.product
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  .product-image-wrapper
+    width: 100%
+    @media screen and (min-width: $md-bp)
+      flex: 0 0 42%
+      max-width: 42%
+    height: auto
+    .product-image
+      width: 100%
+      margin-bottom: 8px
+      img
+        max-width: 100%
+        display: block
+        height: auto
+    .product-miniatures
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      flex-wrap: wrap
+    .miniature
+      height: auto
+      width: 80px
+      padding: 10px
+      border: 1px solid #eaeaea
+      box-sizing: border-box
+      cursor: pointer
+      margin: 0 8px
+      transition: border 0.3s
+      &:hover, &.active
+        border: 1px solid #7f7fbf
+      img
+        max-width: 100%
+        display: block
+  .product-details
+    width: 100%
+    box-sizing: border-box
+    padding-left: 30px
+    @media screen and (min-width: $md-bp)
+      flex: 0 0 58%
+      max-width: 58%
+    .product-header
+      padding-bottom: 10px
+    .product-title
+      font-size: 36px
+    .product-description
+      font-size: 14px
+    .product-quantity
+      font-size: 14px
+      .product-quantity-value
+        font-weight: 700
+        font-size: 14px
+        &.green
+          color: #5cb85c
+        &.yellow
+          color: #dac406
+        &.red
+          color: #e73237
+    .product-description
+      padding: 30px 25px 30px 0
+    .product-price
+      padding-bottom: 10px
+      margin-bottom: 24px
+      .product-price-current
+        font-size: 36px
+        text-decoration: none
+      .product-price-old
+        font-size: 20px
+        text-decoration: line-through
+        padding-left: 8px
+.popup-overlay
+  position: fixed
+  z-index: 500
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  background-color: rgba(0,0,0,0.6)
+  .cart-message
+    max-width: 90%
+    background-color: #ffffff
+    padding: 25px 50px
+    box-sizing: border-box
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    .cart-message-title
+      font-size: 22px
+      font-weight: 700
+      text-align: center
+      margin-bottom: 8px
+    .btn
+      width: 220px
+      box-sizing: border-box
+      padding: 10px 0
+      margin: 0 auto 10px auto
+      &:last-child
+        margin-bottom: 0
+    .close-btn
+      text-decoration: none
+      color: $gray
+      position: absolute
+      right: 12px
+      top: 12px
+      font-size: 22px
+      line-height: 100%
+      transition: opacity 0.3s
+      &:hover
+        opacity: 0.7
+    .cart-message-product-title
+      color: $text-color-secondary
+      font-weight: 700
+      text-align: center
+      margin-bottom: 16px
+
+
+
+
+
+
+
